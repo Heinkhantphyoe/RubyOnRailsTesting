@@ -1,0 +1,25 @@
+<h1>Showing  article</h1>
+
+<h1><%= @article.title %></h1>
+<p><%= @article.body %></p>
+
+<% if @article.profile_image.attached? %>
+<p><%= image_tag @article.profile_image, style: "width:200px;height:300px;" %></p>
+<%end%>
+
+<p><%= link_to "Edit ", edit_article_path(@article) %></p>
+
+<p><%= link_to "Destroy", article_path(@article), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></p>
+
+<p><%= link_to "Back", root_path %></p>
+
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
