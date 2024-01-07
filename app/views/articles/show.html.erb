@@ -1,5 +1,7 @@
 <h1>Showing  article</h1>
 
+
+
 <h1><%= @article.title %></h1>
 <p><%= @article.body %></p>
 
@@ -14,7 +16,10 @@
     turbo_confirm: "Are you sure?"
   } %></p>
 
+
 <p><%= link_to "Back", root_path %></p>
+
+
 
 <h2>Comments</h2>
 <%= render @article.comments %>
