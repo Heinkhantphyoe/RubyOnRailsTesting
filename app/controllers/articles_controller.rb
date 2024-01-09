@@ -4,9 +4,9 @@ class ArticlesController < ApplicationController
 
 
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
     # @articles = Article.order(:title).page params[:page]
-    @articles = Article.paginate(page: params[:page], per_page: 1)
+    # @articles = Article.paginate(page: params[:page], per_page: 1)
   end
 
   def show

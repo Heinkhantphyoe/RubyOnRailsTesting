@@ -43,13 +43,19 @@ gem "bootsnap", require: false
 
 gem 'kaminari'\
 
-gem 'bootstrap', '~> 5.2', '>= 5.2.3'
+
 
 gem 'sass-rails', '>= 5'
 
 gem 'will_paginate', '~> 4.0'
 
 gem 'bootstrap-will_paginate'
+
+gem 'bootstrap', '~> 5.3.2'
+
+gem 'ransack'
+
+gem 'faker'
 
 
 
